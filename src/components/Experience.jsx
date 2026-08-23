@@ -1,0 +1,31 @@
+import TermWindow from './TermWindow'
+import { profile, experience } from '../data/content'
+
+export default function Experience() {
+  return (
+    <TermWindow id="experience" path={`${profile.user}@${profile.host}: ~/experience`}>
+      <p className="cmd">
+        <span className="prompt">➜ ~/experience</span> cat career.log
+      </p>
+      <div className="log">
+        {experience.map((job, ji) => (
+          <div key={ji} className="log-entry">
+            <p className="log-title">
+              [<span className="green">{job.period}</span>] {job.title}
+            </p>
+            {job.points.map((pt, pi) => {
+              const last = pi === job.points.length - 1
+              return (
+                <p key={pi} className="tree-line indent">
+                  {last ? '└──' : '├──'} {pt}
+                </p>
+              )
+            })}
+            {ji < experience.length - 1 && <p className="dim log-gap">*</p>}
+          </div>
+        ))}
+        <p className="dim log-end">[eof]</p>
+      </div>
+    </TermWindow>
+  )
+}
