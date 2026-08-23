@@ -214,11 +214,6 @@ body {
   color: var(--muted);
 }
 
-.bar {
-  color: var(--green);
-  letter-spacing: 1px;
-}
-
 .cursor {
   display: inline-block;
   width: 0.62em;
@@ -343,9 +338,6 @@ body {
   padding-left: 4ch;
   color: var(--muted);
 }
-.indent .bar {
-  margin-right: 6px;
-}
 
 .scroll-x {
   overflow-x: auto;
@@ -372,6 +364,64 @@ body {
   transform: translateY(-3px);
   border-color: var(--border-green);
   box-shadow: 0 8px 30px rgba(0, 255, 136, 0.07);
+}
+
+.project-shot {
+  margin: 0 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--navy-950);
+  transition: border-color 0.15s ease;
+}
+
+.shot-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  background: rgba(0, 255, 136, 0.04);
+  border-bottom: 1px solid var(--border);
+}
+
+.shot-bar .dots {
+  gap: 5px;
+}
+
+.shot-bar .dots i {
+  width: 8px;
+  height: 8px;
+}
+
+.shot-name {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.project-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.project-card:hover .project-shot {
+  border-color: var(--border-green);
+}
+
+.project-card:hover .project-shot img {
+  transform: scale(1.04);
+}
+
+.shot-fallback {
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
 }
 
 .project-head {

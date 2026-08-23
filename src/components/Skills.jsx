@@ -1,11 +1,6 @@
 import TermWindow from './TermWindow'
 import { profile, skills } from '../data/content'
 
-const bar = (level) => {
-  const filled = Math.round(level / 10)
-  return '█'.repeat(filled) + '░'.repeat(10 - filled)
-}
-
 export default function Skills() {
   return (
     <TermWindow id="skills" path={`${profile.user}@${profile.host}: ~/skills`}>
@@ -21,9 +16,7 @@ export default function Skills() {
             </p>
             {group.items.map((s, i) => (
               <p key={s.name} className="tree-line indent">
-                {i === group.items.length - 1 ? '└──' : '├──'}{' '}
-                {s.name.padEnd(18)}
-                <span className="bar">{bar(s.level)}</span> {s.level}%
+                {i === group.items.length - 1 ? '└──' : '├──'} {s.name}
               </p>
             ))}
           </div>

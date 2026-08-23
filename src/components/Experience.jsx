@@ -1,5 +1,5 @@
 import TermWindow from './TermWindow'
-import { profile, experience } from '../data/content'
+import { profile, experience, education } from '../data/content'
 
 export default function Experience() {
   return (
@@ -24,6 +24,15 @@ export default function Experience() {
             {ji < experience.length - 1 && <p className="dim log-gap">*</p>}
           </div>
         ))}
+        <p className="cmd">
+          <span className="prompt">➜ ~/experience</span> cat education.txt
+        </p>
+        <div className="log-entry">
+          <p className="log-title">
+            [<span className="green">{education.period}</span>] {education.degree} — {education.school}
+          </p>
+          <p className="tree-line indent">└── {education.note}</p>
+        </div>
         <p className="dim log-end">[eof]</p>
       </div>
     </TermWindow>

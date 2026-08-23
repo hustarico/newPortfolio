@@ -1,26 +1,25 @@
 export const profile = {
   user: 'guest',
-  host: 'dev-portfolio',
-  name: 'Jane Doe',
+  host: 'hussam-tarteer',
+  name: 'Hussam Tarteer',
   role: 'Full-Stack Developer',
-  location: 'Bengaluru, IN (UTC+5:30)',
-  email: 'hello@janedoe.dev',
-  resumeUrl: '#',
-  tagline: 'I build reliable backends and clean frontends.',
+  location: 'Amman, Jordan (UTC+3)',
+  email: 'hussamcodes@gmail.com',
+  resumeUrl: '/hussam-tarteer-resume.pdf',
+  tagline: 'I build REST APIs with Spring Boot and reactive UIs with React.',
   about: [
-    'Hi, I am Jane — a developer who lives somewhere between the JVM and the browser.',
-    'My day usually starts with a strong coffee and ends with a green test suite. I design REST APIs with Spring Boot, model data across MySQL and PostgreSQL, and ship interfaces people actually enjoy using with React.',
-    'I run Linux as my daily driver, script my way out of repetitive work, and believe infrastructure should be boring — predictable, observable, and documented.',
+    'Hi, I am Hussam — a full-stack developer from Amman, Jordan, currently leading web platform development for IEEE RAS UJ.',
+    'I build REST APIs and real-time systems with Spring Boot, and ship reactive interfaces with React. I recently completed a Spring Boot internship at ProgressSoft, where I wrote production-grade code under senior mentorship, and independently built Echo, a real-time chat backend powered by WebSockets and JWT authentication.',
+    'My goal is simple: contribute to real product development and grow under experienced engineers. Off the keyboard I run Linux as my daily driver and give workshops on Python, Git, problem solving, and Linux basics.',
   ],
   socials: [
-    { label: 'github', url: 'https://github.com/janedoe', handle: '@janedoe' },
-    { label: 'linkedin', url: 'https://linkedin.com/in/janedoe', handle: '/in/janedoe' },
-    { label: 'twitter', url: 'https://x.com/janedoe', handle: '@janedoe' },
+    { label: 'github', url: 'https://github.com/hustarico', handle: '@hustarico' },
+    { label: 'website', url: 'https://hussamtarteer.netlify.app', handle: 'hussamtarteer.netlify.app' },
   ],
 }
 
 export const heroLines = [
-  { pre: '$ ', text: 'ssh guest@dev-portfolio' },
+  { pre: '$ ', text: 'ssh guest@hussam-tarteer' },
   { pre: '[ok] ', text: 'connection established' },
   { pre: '$ ', text: 'whoami' },
   { pre: '> ', text: profile.name },
@@ -32,99 +31,123 @@ export const skills = [
   {
     group: 'backend/',
     items: [
-      { name: 'spring-boot', level: 92 },
-      { name: 'rest-apis', level: 90 },
-      { name: 'spring-security', level: 78 },
-      { name: 'jpa-hibernate', level: 82 },
+      { name: 'java' },
+      { name: 'spring-boot' },
+      { name: 'spring-security' },
+      { name: 'jpa-hibernate' },
+      { name: 'websockets-stomp' },
+      { name: 'rest-apis' },
     ],
   },
   {
     group: 'frontend/',
     items: [
-      { name: 'react', level: 88 },
-      { name: 'javascript-es6+', level: 85 },
-      { name: 'html-css', level: 86 },
-      { name: 'vite', level: 80 },
+      { name: 'reactjs' },
+      { name: 'javascript-es6+' },
+      { name: 'html-css' },
     ],
   },
   {
     group: 'databases/',
     items: [
-      { name: 'postgresql', level: 84 },
-      { name: 'mysql', level: 83 },
-      { name: 'redis', level: 70 },
+      { name: 'mysql' },
+      { name: 'postgresql' },
     ],
   },
   {
-    group: 'systems/',
+    group: 'practices-tools/',
     items: [
-      { name: 'linux', level: 89 },
-      { name: 'bash-scripting', level: 80 },
-      { name: 'docker', level: 75 },
-      { name: 'git', level: 90 },
+      { name: 'solid-clean-code' },
+      { name: 'design-patterns' },
+      { name: 'junit' },
+      { name: 'mockito' },
+      { name: 'docker' },
+      { name: 'git-github' },
+      { name: 'linux' },
     ],
   },
 ]
 
 export const projects = [
   {
-    name: 'taskflow-api',
-    desc: 'Task management REST API with JWT auth, role-based access and audit logging.',
-    tech: ['Spring Boot', 'PostgreSQL', 'Docker'],
-    repo: 'https://github.com/janedoe/taskflow-api',
-    demo: '#',
+    name: 'echo',
+    image: '/screenshots/echo.svg',
+    desc: 'Real-time messaging platform backend — direct and group chats with secure auth.',
+    tech: ['Spring Boot', 'MySQL', 'WebSockets STOMP', 'JWT'],
+    repo: 'https://github.com/hustarico/echo',
   },
   {
-    name: 'shopstream-ui',
-    desc: 'Real-time storefront dashboard with live inventory updates over WebSockets.',
-    tech: ['React', 'Vite', 'Spring Boot'],
-    repo: 'https://github.com/janedoe/shopstream-ui',
-    demo: '#',
+    name: 'aeye-backend',
+    image: '/screenshots/aeye-backend.svg',
+    desc: 'AI-powered CCTV system: Python AI layer talking to a Spring Boot core over REST at ~15 req/s for near real-time image updates.',
+    tech: ['Spring Boot', 'Python', 'REST', 'JWT'],
+    repo: 'https://github.com/hustarico/aeye-backend',
   },
   {
-    name: 'ledgerly',
-    desc: 'Double-entry accounting engine with ACID-safe transactions and reporting exports.',
-    tech: ['MySQL', 'Java', 'Batch'],
-    repo: 'https://github.com/janedoe/ledgerly',
-    demo: '#',
+    name: 'geeks-league-backend',
+    image: '/screenshots/geeks-league.svg',
+    desc: 'REST API for the IEEE CS JU Geeks League platform — live in production on Render.',
+    tech: ['Spring Boot', 'MySQL', 'Render'],
+    repo: 'https://github.com/hustarico/geeksLeagueBackend',
   },
   {
-    name: 'ops-toolkit',
-    desc: 'Collection of bash scripts and systemd units for server provisioning and backups.',
-    tech: ['Linux', 'Bash', 'cron'],
-    repo: 'https://github.com/janedoe/ops-toolkit',
-    demo: '#',
+    name: 'streakr',
+    image: '/screenshots/streakr.svg',
+    desc: 'Client-side React productivity tool with streak tracking and session analytics — no backend, no accounts, instant load.',
+    tech: ['React', 'localStorage', 'Netlify'],
+    demo: 'https://streakr-study.netlify.app',
+  },
+  {
+    name: 'smart-cell-website',
+    image: '/screenshots/smart-cell.svg',
+    desc: 'Responsive portfolio website for Smart Cell company — shipped with a two-person team using Git.',
+    tech: ['HTML/CSS', 'JavaScript', 'Git'],
+    demo: 'https://ses-jo.com',
+  },
+  {
+    name: 'ieee-ras-uj-website',
+    image: '/screenshots/ieee-ras-uj.svg',
+    desc: 'Official team website for IEEE RAS UJ — designed and built with ReactJS (ongoing).',
+    tech: ['ReactJS', 'Responsive Design'],
+    repo: 'https://github.com/hustarico/IEEE-RAS-UJ-WEBSITE',
   },
 ]
 
 export const experience = [
   {
-    period: '2024.03 — present',
-    title: 'Senior Full-Stack Developer @ NimbusWorks',
+    period: '2026.08',
+    title: 'Software Development Intern @ ProgressSoft — Amman',
     points: [
-      'Led decomposition of a monolith into Spring Boot microservices behind an API gateway',
-      'Tuned PostgreSQL queries and indexes, cutting p95 API latency by 40%',
-      'Built internal admin tooling in React adopted by 3 teams',
+      'Built two Spring Boot applications under mentor guidance applying SOLID principles, clean code and design patterns',
+      'Wrote unit and integration tests with JUnit and Mockito to validate application behavior',
+      'Worked with PostgreSQL for persistence and Docker for containerized dev environments',
+      'Participated in daily standups with hands-on mentorship from senior engineers',
     ],
   },
   {
-    period: '2021.07 — 2024.02',
-    title: 'Backend Developer @ Corelink Systems',
+    period: '2025.10 — present',
+    title: 'Webmaster @ IEEE RAS UJ — University of Jordan',
     points: [
-      'Designed MySQL schemas powering 200k+ daily transactions',
-      'Automated CI/CD pipelines and zero-downtime deploys on Linux servers',
-      'Hardened REST APIs with rate limiting and Spring Security',
+      'Orchestrating development, launch and maintenance of multiple IEEE RAS UJ web platforms, including the official ReactJS team site',
+      'Delivered workshops on Python, Git/GitHub, problem solving and Linux basics',
     ],
   },
   {
-    period: '2019.06 — 2021.06',
-    title: 'Software Engineer Intern → Associate Dev @ PixelForge',
+    period: '2024 — present',
+    title: 'Technical Member @ IEEE CS UJ — University of Jordan',
     points: [
-      'Shipped customer-facing features in a React SPA',
-      'Wrote migration scripts moving legacy data into PostgreSQL',
+      'Contributed development, UX improvements and bug fixes to the official IEEE CIS JU website',
+      'Collaborated on organizing tech events and workshops; mentored peers learning full-stack development',
     ],
   },
 ]
+
+export const education = {
+  period: '2023 — present',
+  degree: "B.Sc. Computer Information Systems",
+  school: 'University of Jordan',
+  note: 'GPA: Very Good',
+}
 
 export const socials = profile.socials
 
@@ -136,4 +159,3 @@ export const navLinks = [
   { href: '#terminal', label: './terminal' },
   { href: '#contact', label: './contact' },
 ]
-

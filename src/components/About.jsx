@@ -16,10 +16,11 @@ export default function About() {
         <span className="prompt">➜ ~/about</span> ls highlights/
       </p>
       <div className="chips">
-        <span className="chip">5+ yrs experience</span>
-        <span className="chip">20+ projects shipped</span>
+        <span className="chip">ProgressSoft intern</span>
+        <span className="chip">IEEE RAS UJ webmaster</span>
+        <span className="chip">spring boot + react</span>
         <span className="chip">linux daily driver</span>
-        <span className="chip">open-source contributor</span>
+        <span className="chip">open to internships</span>
       </div>
       <a className="btn" href={profile.resumeUrl} download>
         [ download_resume.pdf ]

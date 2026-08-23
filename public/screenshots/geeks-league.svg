@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'JetBrains Mono','Fira Code',Consolas,monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1e3a"/>
+      <stop offset="1" stop-color="#050d1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="40" y="36" width="720" height="428" rx="10" fill="#0a1930" stroke="#22375f"/>
+  <path d="M40 76 h720 v-30 a10 10 0 0 0 -10 -10 h-700 a10 10 0 0 0 -10 10 z" fill="#0e2244"/>
+  <circle cx="66" cy="56" r="6" fill="#e8f0f5" opacity="0.55"/>
+  <circle cx="88" cy="56" r="6" fill="#8ba3c7"/>
+  <circle cx="110" cy="56" r="6" fill="#00ff88"/>
+  <text x="736" y="61" font-size="13" fill="#8ba3c7" text-anchor="end">geeks-league-backend — production</text>
+  <text x="64" y="112" font-size="15" fill="#00ff88">$ curl -s https://geeks-league.onrender.com/health | jq .</text>
+  <text x="64" y="144" font-size="15" fill="#e8f0f5">{</text>
+  <text x="64" y="172" font-size="15" fill="#e8f0f5">  "status": <tspan fill="#00ff88">"UP"</tspan>, "db": "mysql", "uptime_days": 42</text>
+  <text x="64" y="200" font-size="15" fill="#e8f0f5">}</text>
+  <text x="64" y="240" font-size="14" fill="#e8f0f5"><tspan fill="#00ff88">GET</tspan>    /api/v1/leaderboard   <tspan fill="#00ff88">200</tspan>  12ms  cache HIT</text>
+  <text x="64" y="266" font-size="14" fill="#e8f0f5"><tspan fill="#00ff88">POST</tspan>   /api/v1/sessions      <tspan fill="#00ff88">201</tspan>  48ms</text>
+  <text x="64" y="292" font-size="14" fill="#e8f0f5"><tspan fill="#00ff88">GET</tspan>    /api/v1/events        <tspan fill="#00ff88">200</tspan>  31ms</text>
+  <rect x="64" y="316" width="692" height="122" rx="6" fill="#0e2244" stroke="#22375f"/>
+  <text x="80" y="344" font-size="12" fill="#8ba3c7">last 24h on render.com</text>
+  <polyline points="84,414 134,408 184,412 234,396 284,400 334,388 384,392 434,376 484,380 534,368 584,372 634,360 684,364 726,356"
+    fill="none" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="80" y="430" font-size="12" fill="#8ba3c7">requests served · 0 errors · p95 87ms</text>
+</svg>

@@ -4,11 +4,6 @@ import { profile, skills, projects, socials } from '../data/content'
 
 const PROMPT = `${profile.user}@${profile.host}:~$`
 
-const bar = (level) => {
-  const filled = Math.round(level / 10)
-  return '█'.repeat(filled) + '░'.repeat(10 - filled)
-}
-
 const ASCII = `     .--.
     |o_o |
     |:_/ |
@@ -74,15 +69,11 @@ function runCommand(raw) {
       return skills.flatMap((g) => [
         <span key={`${g.group}-h`} className="dir">{g.group}</span>,
         ...g.items.map((s) => (
-          <span key={s.name}>
-            {'  '}
-            {s.name.padEnd(18)}
-            <span className="bar">{bar(s.level)}</span> {s.level}%
-          </span>
+          <span key={s.name}>{'  '}{s.name}</span>
         )),
       ])
     case 'ls':
-      return ['about.md  career.log  projects/  skills/  contact.sh']
+      return ['about.md  career.log  education.txt  projects/  skills/  contact.sh']
     case 'projects':
       return projects.flatMap((p) => [
         <span key={p.name} className="dir">{p.name}/</span>,
