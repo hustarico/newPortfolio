@@ -29,6 +29,15 @@ export const heroLines = [
   { pre: '> ', text: profile.role },
 ]
 
+export const trustedBy = [
+  { name: 'ProgressSoft', logo: '/logos/progresssoft.png' },
+  { name: 'IEEE Jordan Section', logo: '/logos/ieee-jordan.png' },
+  { name: 'IEEE Computer Society · UJ', logo: '/logos/ieee-cs-uj.png' },
+  { name: 'IEEE Computational Intelligence · UJ', logo: '/logos/ieee-cis-uj.png' },
+  { name: 'IEEE Robotics & Automation · UJ', logo: '/logos/ieee-ras-uj.png' },
+  { name: 'Smart Cell', logo: '/logos/smart-cell.png' },
+]
+
 export const skills = [
   {
     group: 'backend/',

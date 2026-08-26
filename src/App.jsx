@@ -7,6 +7,7 @@ import Experience from './components/Experience'
 import InteractiveTerminal from './components/InteractiveTerminal'
 import Contact from './components/Contact'
 import StatusBar from './components/StatusBar'
+import TrustedBy from './components/TrustedBy'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <TitleBar />
       <main className="container">
         <Hero />
+        <TrustedBy />
         <Projects />
         <About />
         <Experience />

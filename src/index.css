@@ -333,6 +333,137 @@ textarea:focus-visible {
   width: 100%;
 }
 
+.trust-shell {
+  position: relative;
+  overflow: hidden;
+  margin-top: -34px;
+  padding: 25px 0 18px;
+  border-top: 1px solid var(--border-green);
+  border-bottom: 1px solid var(--border-green);
+  background:
+    linear-gradient(90deg, rgba(0, 255, 136, 0.025), transparent 28%, transparent 72%, rgba(0, 255, 136, 0.025)),
+    rgba(7, 17, 31, 0.35);
+}
+
+.trust-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(139, 163, 199, 0.035) 1px, transparent 1px);
+  background-size: 100% 24px;
+}
+
+.trust-header {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 24px 20px;
+}
+
+.trust-header h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.trust-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 10.5px;
+  white-space: nowrap;
+}
+
+.trust-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 10px var(--green-glow);
+}
+
+.trust-marquee {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.trust-track {
+  display: flex;
+  width: max-content;
+  animation: trustScroll 40s linear infinite;
+  will-change: transform;
+}
+
+.trust-marquee:hover .trust-track,
+.trust-marquee:focus-within .trust-track {
+  animation-play-state: paused;
+}
+
+.trust-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+.trust-item {
+  width: 250px;
+  min-height: 88px;
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(10, 23, 40, 0.82);
+  color: var(--muted);
+  font-size: 11.5px;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.trust-item:hover {
+  color: var(--white);
+  border-color: var(--border-green);
+  background: rgba(13, 29, 49, 0.95);
+}
+
+.trust-item img {
+  display: block;
+  width: 86px;
+  height: 54px;
+  object-fit: contain;
+  opacity: 0.68;
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.trust-item:hover img {
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.18));
+}
+
+.trust-note {
+  position: relative;
+  padding: 14px 24px 0;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+@keyframes trustScroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.7fr);
@@ -927,6 +1058,28 @@ textarea:focus-visible {
     gap: 34px;
     min-height: 0;
   }
+  .trust-shell {
+    margin-top: 0;
+  }
+  .trust-header {
+    align-items: flex-start;
+    padding-inline: 16px;
+  }
+  .trust-status {
+    display: none;
+  }
+  .trust-item {
+    width: 220px;
+    grid-template-columns: 72px 1fr;
+    padding-inline: 14px;
+  }
+  .trust-item img {
+    width: 72px;
+  }
+  .trust-note {
+    padding-inline: 16px;
+    text-align: left;
+  }
   .hero-proof {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1044,5 +1197,16 @@ textarea:focus-visible {
   .btn,
   .project-card {
     transition: none;
+  }
+  .trust-marquee {
+    overflow-x: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .trust-track {
+    animation: none;
+  }
+  .trust-group[aria-hidden='true'] {
+    display: none;
   }
 }
