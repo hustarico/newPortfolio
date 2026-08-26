@@ -1,7 +1,9 @@
 import TermWindow from './TermWindow'
-import { profile } from '../data/content'
+import { profile, projects } from '../data/content'
 
 export default function Hero() {
+  const projectLabel = projects.length === 1 ? 'project' : 'projects'
+
   return (
     <div className="hero" id="top">
       <TermWindow path={`${profile.user}@${profile.host}: ~ — zsh`}>
@@ -24,11 +26,7 @@ export default function Hero() {
               <span>backend focus</span>
             </div>
             <div className="proof-item">
-              <strong>~15 req/s</strong>
-              <span>AI service integration</span>
-            </div>
-            <div className="proof-item">
-              <strong>6 projects</strong>
+              <strong>{projects.length} {projectLabel}</strong>
               <span>featured below</span>
             </div>
             <div className="proof-location"><span className="dim">based in</span><br />{profile.location}</div>
