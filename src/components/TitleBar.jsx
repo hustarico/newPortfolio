@@ -23,7 +23,7 @@ export default function TitleBar() {
             <a key={l.href} href={l.href}>{l.label}</a>
           ))}
         </nav>
-        <a className="cta-mini" href="#contact">hire_me</a>
+        <a className="cta-mini" href="#contact">Let’s talk</a>
         <button
           type="button"
           className={`burger${open ? ' open' : ''}`}

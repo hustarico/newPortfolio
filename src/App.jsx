@@ -15,12 +15,12 @@ export default function App() {
       <TitleBar />
       <main className="container">
         <Hero />
-        <About />
-        <Skills />
         <Projects />
+        <About />
         <Experience />
-        <InteractiveTerminal />
+        <Skills />
         <Contact />
+        <InteractiveTerminal />
       </main>
       <StatusBar />
     </>

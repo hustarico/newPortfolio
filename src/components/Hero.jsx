@@ -1,44 +1,38 @@
 import TermWindow from './TermWindow'
-import { profile, heroLines } from '../data/content'
-import useTypewriter from '../hooks/useTypewriter'
+import { profile } from '../data/content'
 
 export default function Hero() {
-  const { typed, active, done } = useTypewriter(heroLines)
-
   return (
     <div className="hero" id="top">
       <TermWindow path={`${profile.user}@${profile.host}: ~ — zsh`}>
-        <div className="hero-lines">
-          {typed.map((l, i) => (
-            <p key={i} className="hero-line">
-              <span className="prompt">{l.pre}</span>
-              {l.text}
-            </p>
-          ))}
-          {!done && (
-            <p className="hero-line">
-              {active}
-              <span className="cursor" aria-hidden="true" />
-            </p>
-          )}
-          {done && (
-            <>
-              <h1 className="hero-name">
-                {profile.name}
-                <span className="cursor" aria-hidden="true" />
-              </h1>
-              <p className="hero-tagline">
-                <span className="prompt">&gt;</span> {profile.tagline}
-              </p>
-              <p className="hero-loc">
-                <span className="dim">location:</span> {profile.location}
-              </p>
-              <div className="hero-actions">
-                <a className="btn" href="#projects">./view-projects.sh</a>
-                <a className="btn btn-ghost" href="#contact">cat contact.txt</a>
-              </div>
-            </>
-          )}
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow"><span className="prompt">$</span> whoami</p>
+            <h1 className="hero-name">{profile.name}</h1>
+            <p className="hero-tagline">{profile.tagline}</p>
+            <p className="hero-intro">{profile.intro}</p>
+            <div className="hero-actions">
+              <a className="btn" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+              <a className="btn btn-ghost" href={profile.resumeUrl} target="_blank" rel="noreferrer">View résumé</a>
+            </div>
+            <p className="availability"><span className="availability-dot" aria-hidden="true" />{profile.availability}</p>
+          </div>
+          <aside className="hero-proof" aria-label="At a glance">
+            <p className="proof-label">currently.txt</p>
+            <div className="proof-item">
+              <strong>Spring Boot</strong>
+              <span>backend focus</span>
+            </div>
+            <div className="proof-item">
+              <strong>~15 req/s</strong>
+              <span>AI service integration</span>
+            </div>
+            <div className="proof-item">
+              <strong>6 projects</strong>
+              <span>featured below</span>
+            </div>
+            <div className="proof-location"><span className="dim">based in</span><br />{profile.location}</div>
+          </aside>
         </div>
       </TermWindow>
     </div>

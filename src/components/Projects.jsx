@@ -4,12 +4,16 @@ import { profile, projects } from '../data/content'
 export default function Projects() {
   return (
     <TermWindow id="projects" path={`${profile.user}@${profile.host}: ~/projects`}>
+      <div className="section-heading">
+        <span className="section-index">01</span>
+        <div><p className="eyebrow">Selected work</p><h2>Systems I’ve built and shipped</h2></div>
+      </div>
       <p className="cmd">
-        <span className="prompt">➜ ~/projects</span> ls -la
+        <span className="prompt">➜ ~/projects</span> find . --type product --sort impact
       </p>
       <div className="projects-grid">
         {projects.map((p) => (
-          <article key={p.name} className="project-card">
+          <article key={p.name} className={`project-card${p.featured ? ' featured' : ''}`}>
             <figure className="project-shot">
               <span className="shot-bar">
                 <span className="dots" aria-hidden="true">
@@ -35,12 +39,14 @@ export default function Projects() {
               )}
             </figure>
             <div className="project-head">
-              <span className="perm dim">drwxr-xr-x</span>
-              <a href={p.repo} target="_blank" rel="noreferrer" className="project-name">
-                {p.name}/
-              </a>
+              <div>
+                <span className="project-label">{p.label}</span>
+                <h3 className="project-name">{p.name}</h3>
+              </div>
+              {p.featured && <span className="featured-mark">featured</span>}
             </div>
             <p className="project-desc">{p.desc}</p>
+            <p className="project-impact"><span aria-hidden="true">↳</span> {p.impact}</p>
             <div className="tags">
               {p.tech.map((t) => (
                 <span key={t} className="tag">{t}</span>
@@ -48,8 +54,8 @@ export default function Projects() {
             </div>
             {(p.repo || p.demo) && (
               <div className="project-links">
-                {p.repo && <a href={p.repo} target="_blank" rel="noreferrer">[ git_repo ]</a>}
-                {p.demo && <a href={p.demo} target="_blank" rel="noreferrer">[ live_demo ]</a>}
+                {p.repo && <a href={p.repo} target="_blank" rel="noreferrer">View repository ↗</a>}
+                {p.demo && <a href={p.demo} target="_blank" rel="noreferrer">Live product ↗</a>}
               </div>
             )}
           </article>

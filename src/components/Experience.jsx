@@ -4,6 +4,10 @@ import { profile, experience, education } from '../data/content'
 export default function Experience() {
   return (
     <TermWindow id="experience" path={`${profile.user}@${profile.host}: ~/experience`}>
+      <div className="section-heading">
+        <span className="section-index">03</span>
+        <div><p className="eyebrow">Experience</p><h2>Learning in real teams</h2></div>
+      </div>
       <p className="cmd">
         <span className="prompt">➜ ~/experience</span> cat career.log
       </p>
