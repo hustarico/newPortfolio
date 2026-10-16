@@ -14,7 +14,10 @@ export default function Contact() {
     2,
   )
 
-  const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
+  const update = (k) => (e) => {
+    setSent(null)
+    setForm((f) => ({ ...f, [k]: e.target.value }))
+  }
 
   const submit = (e) => {
     e.preventDefault()

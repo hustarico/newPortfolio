@@ -21,7 +21,8 @@ export default function Experience() {
               const last = pi === job.points.length - 1
               return (
                 <p key={pi} className="tree-line indent">
-                  {last ? '└──' : '├──'} {pt}
+                  <span className="pip">{last ? '└── ' : '├── '}</span>
+                  <span className="pt">{pt}</span>
                 </p>
               )
             })}
@@ -35,7 +36,10 @@ export default function Experience() {
           <p className="log-title">
             [<span className="green">{education.period}</span>] {education.degree} — {education.school}
           </p>
-          <p className="tree-line indent">└── {education.note}</p>
+          <p className="tree-line indent">
+            <span className="pip">└── </span>
+            <span className="pt">{education.note}</span>
+          </p>
         </div>
         <p className="dim log-end">[eof]</p>
       </div>

@@ -1,17 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { navLinks, profile } from '../data/content'
 
-export default function StatusBar() {
-  const [now, setNow] = useState(new Date())
+const pad = (n) => String(n).padStart(2, '0')
+const formatTime = (d) => `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`
+const formatDate = (d) =>
+  d.toLocaleDateString(undefined, { weekday: 'short', day: '2-digit', month: 'short' })
 
-  useEffect(() => {
-    const t = setInterval(() => setNow(new Date()), 1000)
+export default function StatusBar() {
+  const timeRef = useRef(null)
+  const dateRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const tick = () => {
+      const now = new Date()
+      if (timeRef.current) timeRef.current.textContent = formatTime(now)
+      if (dateRef.current) dateRef.current.textContent = formatDate(now)
+    }
+    tick()
+    const t = setInterval(tick, 1000)
     return () => clearInterval(t)
   }, [])
-
-  const pad = (n) => String(n).padStart(2, '0')
-  const time = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`
-  const date = now.toLocaleDateString(undefined, { weekday: 'short', day: '2-digit', month: 'short' })
 
   return (
     <footer className="statusbar">
@@ -25,8 +33,8 @@ export default function StatusBar() {
         ))}
       </div>
       <div className="sb-right">
-        <span>{date}</span>
-        <span className="green">{time}</span>
+        <span ref={dateRef} />
+        <span className="green" ref={timeRef} />
       </div>
     </footer>
   )

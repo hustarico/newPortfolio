@@ -8,9 +8,10 @@ function LogoGroup({ duplicate = false }) {
           <img
             src={organization.logo}
             alt=""
-            width="220"
-            height="72"
+            width="86"
+            height="54"
             loading="eager"
+            decoding="async"
           />
           <span>{organization.name}</span>
         </div>

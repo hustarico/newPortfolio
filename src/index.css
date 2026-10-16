@@ -637,6 +637,23 @@ textarea:focus-visible {
   color: var(--muted);
 }
 
+/* Experience log: fixed glyph column, text wraps inside its own column */
+.log .tree-line {
+  display: flex;
+  align-items: baseline;
+  padding-left: 0;            /* indent comes from the pip width itself */
+}
+.log .tree-line .pip {
+  flex: none;                 /* glyph trio never squeezes or splits */
+  white-space: pre;           /* keeps '├── ' intact, incl. trailing space */
+}
+.log .tree-line .pt {
+  flex: 1;
+  min-width: 0;               /* shrinkable so long words can break */
+  white-space: pre-wrap;      /* override the 'pre' inherited from .tree-line */
+  overflow-wrap: break-word;
+}
+
 .scroll-x {
   overflow-x: auto;
   padding-bottom: 4px;
