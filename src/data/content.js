@@ -188,7 +188,7 @@ export const experience = [
 ]
 
 export const education = {
-  period: '2023 — present',
+  period: '2023 — Present',
   degree: "B.Sc. Computer Information Systems",
   school: 'University of Jordan',
   note: 'GPA: 3.44 (Very Good)',
