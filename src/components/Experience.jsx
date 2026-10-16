@@ -34,7 +34,7 @@ export default function Experience() {
         </p>
         <div className="log-entry">
           <p className="log-title">
-            [<span className="green">{education.period}</span>] {education.degree} — {education.school}
+            [<span className="green">{education.period}</span>] {education.degree} - {education.school}
           </p>
           <p className="tree-line indent">
             <span className="pip">└── </span>

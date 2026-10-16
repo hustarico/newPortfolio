@@ -62,7 +62,7 @@ function runCommand(raw) {
       ]
     case 'whoami':
       return [
-        `${profile.name} — ${profile.role}`,
+        `${profile.name} - ${profile.role}`,
         profile.tagline,
       ]
     case 'skills':
@@ -163,7 +163,7 @@ export default function InteractiveTerminal() {
   }
 
   return (
-    <TermWindow id="terminal" path={`${PROMPT} — interactive`}>
+    <TermWindow id="terminal" path={`${PROMPT} - interactive`}>
       <div
         className="ishell"
         ref={bodyRef}

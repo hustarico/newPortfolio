@@ -6,7 +6,7 @@ export default function Hero() {
 
   return (
     <div className="hero" id="top">
-      <TermWindow path={`${profile.user}@${profile.host}: ~ — zsh`}>
+      <TermWindow path={`${profile.user}@${profile.host}: ~ - zsh`}>
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow"><span className="prompt">$</span> whoami</p>
