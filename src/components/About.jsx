@@ -1,5 +1,5 @@
 import TermWindow from './TermWindow'
-import { profile } from '../data/content'
+import { profile, highlights } from '../data/content'
 
 export default function About() {
   return (
@@ -20,10 +20,9 @@ export default function About() {
         <span className="prompt">➜ ~/about</span> ls highlights/
       </p>
       <div className="chips">
-        <span className="chip">ProgressSoft alumnus</span>
-        <span className="chip">IEEE RAS UJ webmaster</span>
-        <span className="chip">Spring Boot + React</span>
-        <span className="chip">Linux daily driver</span>
+        {highlights.map((chip) => (
+          <span key={chip} className="chip">{chip}</span>
+        ))}
       </div>
       <a className="text-link" href={profile.resumeUrl} target="_blank" rel="noreferrer">
         Open full résumé <span aria-hidden="true">↗</span>

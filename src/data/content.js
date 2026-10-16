@@ -22,6 +22,13 @@ export const profile = {
   ],
 }
 
+export const highlights = [
+  'ProgressSoft alumnus',
+  'IEEE RAS UJ webmaster',
+  'Spring Boot + React',
+  'Linux daily driver',
+]
+
 export const trustedBy = [
   { name: 'ProgressSoft', logo: '/logos/progresssoft.png' },
   { name: 'IEEE Jordan Section', logo: '/logos/ieee-jordan.png' },
