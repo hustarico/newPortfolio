@@ -19,7 +19,6 @@ export const profile = {
     { label: 'github', url: 'https://github.com/hustarico', handle: '@hustarico' },
     { label: 'email', url: 'mailto:hussamcodes@gmail.com', handle: 'hussamcodes@gmail.com' },
     { label: 'linkedin', url: 'https://linkedin.com/in/hussam-tarteer', handle: '@hussam-tarteer' },
-    
   ],
 }
 
@@ -156,7 +155,7 @@ export const experience = [
     ],
   },
   {
-    period: '2026.10 - Present',
+    period: '2026.10 — Present',
     title: 'Chairman @ Open Source Society — University of Jordan',
     points: [
       'Leading the society\'s executive team and coordinating its technical and community initiatives',
@@ -164,7 +163,7 @@ export const experience = [
     ],
   },
   {
-    period: '2026.01 - 2026-09',
+    period: '2026.01 — 2026.09',
     title: 'Technical Team Lead @ Open Source Society — University of Jordan',
     points: [
       'Helped students get started with Linux and supported them in learning their development environments',
@@ -172,7 +171,7 @@ export const experience = [
     ],
   },
   {
-    period: '2024.03 — present',
+    period: '2024.03 — Present',
     title: 'Technical Member @ IEEE CS UJ — University of Jordan',
     points: [
       'Geeks League: Independently developed the platform\'s Spring Boot and MySQL backend, providing the REST API for a frontend built by another team member.',

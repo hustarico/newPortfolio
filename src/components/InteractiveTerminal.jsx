@@ -17,7 +17,7 @@ function neofetchLines() {
     ['user', `${profile.user}@${profile.host}`],
     ['os', 'Linux x86_64 (daily driver)'],
     ['shell', 'zsh 5.9'],
-    ['uptime', 'shipping code since 2019'],
+    ['uptime', 'shipping code since uni (2023)'],
     ['stack', 'Spring Boot · React · MySQL · PostgreSQL · Linux'],
     ['theme', 'navy / white / terminal-green'],
     ['status', 'open to opportunities'],

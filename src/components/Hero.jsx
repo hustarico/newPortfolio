@@ -27,7 +27,7 @@ export default function Hero() {
             </div>
             <div className="proof-item">
               <strong>{projects.length} {projectLabel}</strong>
-              <span>featured below</span>
+              <span>listed below</span>
             </div>
             <div className="proof-location"><span className="dim">based in</span><br />{profile.location}</div>
           </aside>
