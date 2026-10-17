@@ -65,12 +65,14 @@ export const skills = [
     items: [
       { name: 'mysql' },
       { name: 'postgresql' },
+      { name: 'H2' },
     ],
   },
   {
     group: 'practices-tools/',
     items: [
       { name: 'solid-principles' },
+      { name: 'clean-architecture' },
       { name: 'clean-code' },
       { name: 'design-patterns' },
       { name: 'junit' },
