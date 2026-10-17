@@ -5,7 +5,7 @@ export const profile = {
   role: 'Full-Stack Developer',
   location: 'Amman, Jordan (UTC+3)',
   email: 'hussamcodes@gmail.com',
-  resumeUrl: '/hussam-tarteer-resume.pdf',
+  resumeUrl: 'https://drive.google.com/drive/folders/1EGChHwPCEsj-KeCbcSnrc9OMc9UX3HmU',
   tagline: 'I build reliable Spring Boot systems and focused React experiences',
   intro: 'Full-stack developer in Amman, turning product ideas into secure APIs, real-time systems, and responsive web interfaces',
   availability: 'Open to software engineering opportunities',
