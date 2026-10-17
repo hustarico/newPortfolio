@@ -6,8 +6,8 @@ export const profile = {
   location: 'Amman, Jordan (UTC+3)',
   email: 'hussamcodes@gmail.com',
   resumeUrl: '/hussam-tarteer-resume.pdf',
-  tagline: 'I build reliable Spring Boot systems and focused React experiences.',
-  intro: 'Full-stack developer in Amman, turning product ideas into secure APIs, real-time systems, and responsive web interfaces.',
+  tagline: 'I build reliable Spring Boot systems and focused React experiences',
+  intro: 'Full-stack developer in Amman, turning product ideas into secure APIs, real-time systems, and responsive web interfaces',
   availability: 'Open to software engineering opportunities',
   about: [
     'I\'m Hussam - a backend-first full-stack developer who likes understanding how things work, not just making them work.',
