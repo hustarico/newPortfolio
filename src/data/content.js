@@ -13,12 +13,15 @@ export const profile = {
     'I\'m Hussam - a backend-first full-stack developer who likes understanding how things work, not just making them work.',
     'Java and Spring Boot are home. Most of my work revolves around building backends, from REST APIs and authentication systems to real-time applications. My time at ProgressSoft gave me the opportunity to take that knowledge into a professional software development environment, learn from experienced engineers, and put software design principles into practice.',
     'Outside the code editor, I\'m the Chairman of the Open Source Society at UJ, helping build a community around software development and learning. I\'m also interested in open source and exploring what people are building beyond my own projects.',
-    'I like pulling things apart, figuring out how they work, and putting them back together better. Software gives me plenty of excuses to do exactly that.'
+    'I like pulling things apart, figuring out how they work, and putting them back together better. Software gives me plenty of excuses to do exactly that.',
+    'I ALSO DO CONTENT ON INSTAGRAM AT @hussam.swe !!!'
   ],
   socials: [
     { label: 'github', url: 'https://github.com/hustarico', handle: '@hustarico' },
     { label: 'email', url: 'mailto:hussamcodes@gmail.com', handle: 'hussamcodes@gmail.com' },
     { label: 'linkedin', url: 'https://linkedin.com/in/hussam-tarteer', handle: '@hussam-tarteer' },
+    { label: 'instagram', url: 'https://instagram.com/hussam.swe', handle: '@hussam.swe' },
+
   ],
 }
 
