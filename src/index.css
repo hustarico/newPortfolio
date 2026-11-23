@@ -956,6 +956,16 @@ textarea:focus-visible {
   word-break: break-word;
   margin-bottom: 14px;
 }
+.json a {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+.json a:hover {
+  color: var(--green);
+  text-shadow: 0 0 10px var(--green-glow);
+}
 
 .ok {
   color: var(--green);

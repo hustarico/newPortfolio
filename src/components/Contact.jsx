@@ -5,14 +5,7 @@ import { profile, socials } from '../data/content'
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [sent, setSent] = useState(null)
-  const socialsJson = JSON.stringify(
-    Object.fromEntries([
-      ['email', profile.email],
-      ...socials.map((s) => [s.label, s.handle]),
-    ]),
-    null,
-    2,
-  )
+  const socialRows = socials.map((s) => [s.label, s.handle, s.url])
 
   const update = (k) => (e) => {
     setSent(null)
@@ -55,7 +48,17 @@ export default function Contact() {
         </form>
         <div className="cside">
           <p className="cmd"><span className="prompt">➜</span> cat socials.json</p>
-          <pre className="json">{socialsJson}</pre>
+          <pre className="json">
+            {'{'}
+            {socialRows.map(([label, handle, url], i) => (
+              <span key={label}>
+                {'\n  '}"{label}":{' '}
+                <a href={url} target="_blank" rel="noreferrer">"{handle}"</a>
+                {i < socialRows.length - 1 ? ',' : ''}
+              </span>
+            ))}
+            {'\n}'}
+          </pre>
           {sent && (
             <>
               <p className="cmd ok">✓ payload delivered to mail client:</p>
